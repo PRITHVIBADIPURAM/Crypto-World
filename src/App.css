@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* src/components/Coin.css */
+.coin {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #060000e6; /* Set a white background */
+  box-shadow: 0px 0px 15px rgba(94, 16, 250, 0.902); /* Add a subtle shadow */
+  margin: 10px;
+  transition: transform 0.2s; /* Add a smooth transition effect */
 }
 
-.App-link {
-  color: #61dafb;
+.coin:hover {
+  transform: translateY(-5px); /* Apply a slight lift effect on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.coin img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.coin-details {
+  text-align: center;
+  color: #e4e4e4;
+  
+}
+
+.coin-details h2 {
+  margin: 0;
+  color: #e4e4e4; /* Dark text color */
+}
+
+.coin-details p {
+  margin: 5px 0;
+}
+
+.cryptoHeader {
+  background-color: rgba(94, 16, 250, 0.902);
+  padding: 8px;
+  text-align: center;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerTitle {
+  margin: 0;
+  align-items: center;
+  color: #e4e4e4;
+}
+
+.searchInput {
+  height: 38px;
+  border-radius: 19px;
+  text-align: center;
+  width: 200px; /* Adjust the width as needed */
+  margin-left: auto; /* Push the input to the right */
+}
+/* Additional styling to create a grid-like layout */
+@media (min-width: 768px) {
+  .cryptoDisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
   }
 }
